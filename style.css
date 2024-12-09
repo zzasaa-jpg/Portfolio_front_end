@@ -215,7 +215,7 @@ body {
     padding: 5px;
     transition: all 0.5s ease-in-out;
     cursor: pointer;
-    width: 70px;
+    width: fit-content;
 }
 
 #next {
@@ -255,7 +255,7 @@ body {
     padding: 5px;
     transition: all 0.5s ease-in-out;
     cursor: pointer;
-    width: 76px;
+    width: fit-content;
     z-index: 4;
 }
 
@@ -380,7 +380,7 @@ body {
     padding: 5px;
     transition: all 0.5s ease-in-out;
     cursor: pointer;
-    width: 85px;
+    width: fit-content;
     z-index: 4;
 }
 
