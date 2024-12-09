@@ -1,8 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
-
 * {
     color: white;
-    font-family: "Comfortaa", sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
 }
 
@@ -257,7 +255,7 @@ body {
     padding: 5px;
     transition: all 0.5s ease-in-out;
     cursor: pointer;
-    width: 85px;
+    width: 76px;
     z-index: 4;
 }
 
@@ -382,7 +380,7 @@ body {
     padding: 5px;
     transition: all 0.5s ease-in-out;
     cursor: pointer;
-    width: 99px;
+    width: 85px;
     z-index: 4;
 }
 
