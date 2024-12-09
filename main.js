@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (response.ok) {
             const data = await response.json();
             if (data.length == 0) {
-                let src = "./data.png";
+                let src = "./images/data.png";
                 image_container.src = src
                 console.log("zero");
                 loader(false);
@@ -118,8 +118,8 @@ document.addEventListener("DOMContentLoaded", function () {
                             project_info.innerHTML = ` 
                                                 <h1 id="Project_details_h1">Project_details</h1>
                                                 <p id="description">${e.description}</p>
-                                                <h1 id="github_link"><a href="${e.github}">Github LINK</a></h1>
-                                                <a id="web_link" href="${e.weblink}">Go to Web</a>
+                                                <h1 id="github_link"><a href="${e.github}" target="_blank" rel="noopener noreferrer">Github LINK</a></h1>
+                                                <a id="web_link" href="${e.weblink}" target="_blank" rel="noopener noreferrer">Go to Web</a>
                                                 <p id="tech">${e.technologies}</p>
                                                 <p id="last_update">${e.lastupdate}</p>
                                                 <img src="./images/close-outline.svg" alt="arrow-back" id="close" width=24 height=24>
