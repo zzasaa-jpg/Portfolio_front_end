@@ -117,11 +117,11 @@ document.addEventListener("DOMContentLoaded", function () {
                             project_title.innerText = `${e.title}`;
                             project_info.innerHTML = ` 
                                                 <h1 id="Project_details_h1">Project_details</h1>
-                                                <p id="description">${e.description}</p>
+                                                <p id="description">Description: ${e.description}</p>
                                                 <h1 id="github_link"><a href="${e.github}" target="_blank" rel="noopener noreferrer">Github LINK</a></h1>
                                                 <a id="web_link" href="${e.weblink}" target="_blank" rel="noopener noreferrer">Go to Web</a>
-                                                <p id="tech">${e.technologies}</p>
-                                                <p id="last_update">${e.lastupdate}</p>
+                                                <p id="tech">Technologies: ${e.technologies}</p>
+                                                <p id="last_update">Lastupdate: ${e.lastupdate}</p>
                                                 <img src="./images/close-outline.svg" alt="arrow-back" id="close" width=24 height=24>
                                                 <div class="opacity_conatainer">
                                                     <label for="opacity">opacity</label>
