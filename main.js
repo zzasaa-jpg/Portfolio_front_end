@@ -80,10 +80,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 let fieldnameToUse;
                 if (mediaQuery.matches) {
                     fieldnameToUse = "images-tab";
+                    responsive_arr = [];
                 } else if (mediaQuery1.matches) {
                     fieldnameToUse = "videos-loptop";
+                    responsive_arr = [];
                 } else {
                     fieldnameToUse = "images-loptop";
+                    responsive_arr = [];
                 }
 
                 //----------------------------------------------------------------------------
@@ -111,6 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 function project_move() {
                     arr = []; // Clearing the previous data----------------------------------------
                     body_of_square.innerHTML = '';// Clearing the previous data----------------------------------------
+                    project_info.style.backgroundColor = ""; //clearing the previous background color------------------
                     data.forEach((e, index) => {
                         if (index == project_count) {//project changeing via project_count-----------------------------
                             e = data[project_count];
