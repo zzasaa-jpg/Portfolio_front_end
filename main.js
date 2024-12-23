@@ -24,8 +24,7 @@ let list_value = false;
 let links = false;
 
 document.addEventListener("DOMContentLoaded", function () {
-    async function a() {
-        // loader(true);
+    async function rendering_the_projects() {
         list.addEventListener("click", function () {
             list_value = !list_value;
             if (list_value) {
@@ -39,6 +38,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 project_title.style.display = "flex";
                 responsive.style.display = "flex";
                 links_btn.style.display = "flex";
+                links_container.style.transform = "translateY(600px)";
+                links = false;
             } else {
                 arrow_forward.style.display = "none";
                 arrow_back.style.display = "none";
@@ -50,6 +51,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 project_title.style.display = "none";
                 responsive.style.display = "none";
                 links_btn.style.display = "none";
+                links_container.style.transform = "translateY(600px)";
+                links = false;
             }
         });
 
@@ -111,6 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     responsive_arr = [];
                     project_move()
                 })
+                
                 function project_move() {
                     arr = []; // Clearing the previous data----------------------------------------
                     body_of_square.innerHTML = '';// Clearing the previous data----------------------------------------
@@ -137,7 +141,6 @@ document.addEventListener("DOMContentLoaded", function () {
                                 console.log(opacity.value);
                                 project_info.style.backgroundColor = `rgba(0, 0, 0, ${opacity.value})`;
                             })
-
 
                             let close = document.getElementById("close");
                             close.addEventListener("click", function () {
@@ -264,15 +267,11 @@ document.addEventListener("DOMContentLoaded", function () {
                         const element = responsive_arr[index];
                         const div_img = document.createElement("div");
                         const img = document.createElement("img");
-                        // div_img.style.width = "100px";
-                        // div_img.style.height = "100px";
                         div_img.style.backgroundColor = "transparent"
                         div_img.style.border = "1px solid white";
                         div_img.className = "divImg";
                         img.className = "responsive_show_images";
                         img.style.objectFit = "contain";
-                        // img.style.width = "100px";
-                        // img.style.height = "100px";
                         img.src = `data:image/png;base64,${element}`;
                         div_img.appendChild(img);
                         responsive_container.appendChild(div_img);
@@ -301,7 +300,7 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log("data fetching error!")
         }
     }
-    a()//calling the a() function------------------------------------------------------------------------
+    rendering_the_projects()//calling the rendering_the_projects() function------------------------------------------------------------------------
     function loader(value) {
         let loader_wrapper = document.getElementById("loader_wrapper");
         if (value) {
