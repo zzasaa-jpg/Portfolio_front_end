@@ -475,4 +475,13 @@ body {
     #links_btn {
         right: 10px;
     }
+
+    #body_of_square {
+        top: 10px;
+        right: 5px;
+    }
+
+    #project_section_h1 {
+        top: 8px;
+    }
 }
