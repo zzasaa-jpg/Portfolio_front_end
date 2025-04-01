@@ -1,11 +1,9 @@
 let list = document.getElementById("list");
-let project_section_h1 = document.getElementById("project_section_h1");
 let image_container = document.getElementById("image_container");
 let arrow_forward = document.getElementById("arrow-forward");
 let arrow_back = document.getElementById("arrow-back");
 let body_of_square = document.getElementById("body_of_square");
 let menu = document.getElementById("menu");
-let image = document.getElementById("image");
 let project_info = document.getElementById("project_info");
 let images_ = document.getElementById("images_");
 let project_title = document.getElementById("project_title");
@@ -15,55 +13,34 @@ let responsive = document.getElementById("responsive");
 let responsive_close = document.getElementById("responsive_close");
 let links_btn = document.getElementById("links_btn");
 let links_container = document.getElementById("links_container");
+let container = document.getElementById("container");
+let close_links_container = document.getElementById("close_links_container");
 //-------------project change btns -------------------------------------
 let previous = document.getElementById("previous");
 let next = document.getElementById("next");
 let arr = [];
 let responsive_arr = [];
 let list_value = false;
-let links = false;
 
 document.addEventListener("DOMContentLoaded", function () {
     async function rendering_the_projects() {
         list.addEventListener("click", function () {
             list_value = !list_value;
             if (list_value) {
-                arrow_forward.style.display = "flex";
-                arrow_back.style.display = "flex";
-                menu.style.display = "flex";
-                image.style.display = "flex";
-                previous.style.display = "flex";
-                next.style.display = "flex";
-                project_section_h1.style.display = "flex";
+                container.style.display = "flex";
                 project_title.style.display = "flex";
-                responsive.style.display = "flex";
-                links_btn.style.display = "flex";
-                links_container.style.transform = "translateY(600px)";
-                links = false;
             } else {
-                arrow_forward.style.display = "none";
-                arrow_back.style.display = "none";
-                menu.style.display = "none";
-                image.style.display = "none";
-                previous.style.display = "none";
-                next.style.display = "none";
-                project_section_h1.style.display = "none";
+                container.style.display = "none";
                 project_title.style.display = "none";
-                responsive.style.display = "none";
-                links_btn.style.display = "none";
-                links_container.style.transform = "translateY(600px)";
-                links = false;
             }
         });
 
         links_btn.addEventListener("click", function () {
-            links = !links
-            if (links) {
-                links_container.style.transform = "translateY(0px)";
-            } else {
-                links_container.style.transform = "translateY(600px)";
-            }
+                links_container.style.display = "flex";
         })
+        close_links_container.addEventListener("click", function(){
+                links_container.style.display = "none";
+        });
         loader(true);
         const response = await fetch(`https://portfolio-back-end-q8gv.onrender.com/projects`);
         console.log(response.status);
@@ -147,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                 project_info.style.transform = "translatey(-2000px)";
                                 project_info.style.transition = "All";
                                 project_info.style.transitionDuration = "0.5s";
-                                menu.style.display = "flex";
+                                // menu.style.display = "flex";
                                 list.style.display = "flex";
                             });
                             // description height adujement from (e.description.length)-----------------------------------
@@ -227,9 +204,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     function currentSquares() {
                         squares.forEach((square, index) => {
                             if (index == count) {
-                                square.style.backgroundColor = "rgba(0, 0, 0, 0.507)";
-                            } else {
                                 square.style.backgroundColor = "white";
+                            } else {
+                                square.style.backgroundColor = "rgba(0, 0, 0, 0.507)";
                             }
                             square.addEventListener("click", function () {
                                 count = index;
@@ -248,7 +225,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         project_info.style.transform = "translatey(0px)";
                         project_info.style.transition = "All";
                         project_info.style.transitionDuration = "0.5s";
-                        menu.style.display = "none";
+                        // menu.style.display = "none";
                         list.style.display = "none";
                         links_container.style.transform = "translateY(600px)";
                         links = false;
