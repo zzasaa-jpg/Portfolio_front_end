@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
             loader(false);
             console.log(data);
-            
+
             const handleMediaQueryChange = (mediaQuery, mediaQuery1) => {
                 let fieldnameToUse;
                 if (mediaQuery.matches) {
@@ -93,13 +93,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     }
                     console.log(project_count);
                     responsive_arr = [];
-                    arr = [];
-                    project_count = 0
                     project_move();
                 })
                 next.addEventListener("click", function () {
-                    arr = [];
-                    project_count = 0
                     project_count = (project_count + 1) % data.length;
                     console.log(project_count);
                     responsive_arr = [];
@@ -195,7 +191,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         setTimeout(() => {
                             image_container.src = `data:image/png;base64,${arr[count]}`
                             image_container.style.transform = 'translateX(0px)';
-                            currentSquares()
+                            currentSquares();
                         }, 1000);
                     });
 
@@ -212,7 +208,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         setTimeout(() => {
                             image_container.src = `data:image/png;base64,${arr[count]}`
                             image_container.style.transform = 'translateX(0px)';
-                            currentSquares()
+                            currentSquares();
                         }, 1000)
                     });
 
@@ -229,7 +225,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                 setTimeout(() => {
                                     image_container.src = `data:image/png;base64,${arr[count]}`
                                     image_container.style.transform = 'translateX(0px)';
-                                    currentSquares()
+                                    currentSquares();
                                 }, 1000);
                             })
                         })
@@ -293,7 +289,7 @@ document.addEventListener("DOMContentLoaded", function () {
             mediaQuery.addEventListener("change", () => handleMediaQueryChange(mediaQuery, mediaQuery1));
             mediaQuery1.addEventListener("change", () => handleMediaQueryChange(mediaQuery, mediaQuery1));
         } else {
-            console.log("data fetching error!")
+            console.log("data fetching error!");
         }
 
     }
