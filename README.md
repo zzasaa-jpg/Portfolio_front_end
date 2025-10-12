@@ -6,6 +6,6 @@
 - Java script
 
 ## Website main functionality
-This is my personal portfolio website. Home page renders my projects.
+This is my personal portfolio website.
 
-[Website Link]()
+[Website Link](https://mahendra-kumar-portfolio.netlify.app/)
