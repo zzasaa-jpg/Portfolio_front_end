@@ -1,99 +1,110 @@
- body {
-     margin: 0;
-     font-family: cursive, "Comic Sans MS", "Brush Script MT", sans-serif;
-     background-color: #EFEFEF;
- }
+@font-face {
+    font-family: "Space Mono";
+    src: url('fonts/SpaceMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
- #one {
-     display: flex;
-     justify-content: space-evenly;
-     align-items: center;
-     height: 100vh;
-     margin: 0;
- }
+html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
 
- #paragraph {
-     width: 500px;
- }
+body {
+    margin: 0;
+    font-family: "Space Mono", monospace;
+    background-color: #EFEFEF;
+}
 
- #paragraph>p {
-     text-align: justify;
- }
+#one {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+}
 
- #paragraph>h1 {
-     text-align: start;
- }
+#paragraph {
+    width: 500px;
+}
 
- #img_tag {
-     border-radius: 50%;
-     border: 2px solid #000;
- }
+#paragraph>p {
+    text-align: justify;
+}
 
- #two {
-     margin: 40px 20px;
- }
+#paragraph>h1 {
+    text-align: start;
+}
 
- #three {
-     height: 50px;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     gap: 10px;
- }
+#img_tag {
+    border-radius: 50%;
+    border: 2px solid #000;
+}
 
- table {
-     border-collapse: collapse;
-     width: 100%;
- }
+#two {
+    margin: 40px 20px;
+}
 
- th,
- td {
-     border: 1px solid #000;
-     padding: 8px;
-     text-align: left;
- }
+#three {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
 
- #Dark_mode_btn {
-     padding: 4px;
-     font-family: cursive, "Comic Sans MS", "Brush Script MT", sans-serif;
-     position: absolute;
-     right: 10px;
-     top: 10px;
-     cursor: pointer;
-     border: 0.1px solid #767676;
- }
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
 
- @media only screen and (max-width: 998px) {
-     body {
-         margin: 8px;
-     }
+th,
+td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: left;
+}
 
-     #one {
-         flex-direction: column;
-     }
+#Dark_mode_btn {
+    padding: 4px;
+    font-family: "Space Mono", monospace;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    border: 0.1px solid #767676;
+}
 
-     #paragraph {
-         width: -webkit-fill-available;
-     }
+@media only screen and (max-width: 998px) {
+    body {
+        margin: 8px;
+    }
 
-     #paragraph>h1 {
-         text-align: center;
-     }
+    #one {
+        flex-direction: column;
+    }
 
-     #Dark_mode_btn {
-         right: 5px;
-         top: 5px;
-     }
+    #paragraph {
+        width: -webkit-fill-available;
+    }
 
-     #two {
-         margin: 0;
-         overflow-x: overlay;
-     }
+    #paragraph>h1 {
+        text-align: center;
+    }
 
- }
+    #Dark_mode_btn {
+        right: 5px;
+        top: 5px;
+    }
 
- @media only screen and (max-width: 320px) {
-     #img_tag {
-         width: 100px;
-     }
- }
+    #two {
+        margin: 0;
+        overflow-x: overlay;
+    }
+
+}
+
+@media only screen and (max-width: 320px) {
+    #img_tag {
+        width: 100px;
+    }
+}
