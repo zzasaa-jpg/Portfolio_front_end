@@ -74,7 +74,7 @@ function dark_mode_fun(bool_value) {
         document.getElementsByTagName("button")[0].style.backgroundColor = "#000";
         document.getElementsByTagName("button")[0].style.color = "#fff";
         document.getElementsByTagName("button")[0].innerText = "Light Mode";
-        console.log(Array.from(document.getElementsByTagName("a")))
+        
         Array.from(document.getElementsByTagName("a")).forEach(a => {
             a.style.color = "#fff";
         })
