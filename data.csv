@@ -9,4 +9,4 @@ S.No,Title,Description,Technologies,GitHub_Link,Live_Demo
 8,Web Timer,A simple math-based scratch timer application,[FRONT-END]; HTML; CSS; JavaScript,https://github.com/zzasaa-jpg/timer,https://website-timer.netlify.app/
 9,Path Resolver,A tool to resolve and display file paths in a given directory,[FRONT-END]; HTML; CSS; JavaScript,https://github.com/zzasaa-jpg/Path-Resolver,https://resolve-path.netlify.app/
 10,Puzzle Game,A 357-tile puzzle game with multiple difficulty levels and values,[FRONT-END]; HTML; CSS; JavaScript,https://github.com/zzasaa-jpg/Puzzle,https://357-puzzle.netlify.app/
-11,CLI Time-Tracking Tool in C++,To track actual engineering effort; To stay disciplined during long system-level work; To support development journey,C++,https://github.com/zzasaa-jpg/tick, 
+11,CLI Time-Tracking Tool in C++,To track actual engineering effort; To stay disciplined during long system-level work; To support development journey,[LOW-LEVEL]; C++,https://github.com/zzasaa-jpg/tick, 
